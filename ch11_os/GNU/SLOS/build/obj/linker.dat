@@ -1,0 +1,55 @@
+/* a list of files to be linked */
+
+OUTPUT_FORMAT("elf32-littlearm", "elf32-littlearm", "elf32-littlearm")
+OUTPUT_ARCH(arm)
+INPUT( start.o 
+       init.o 
+       pcb.o 
+       swiapi.o 
+       undef.o
+       swi.o
+       prefetch.o
+       data.o
+       reserved.o
+       irq.o
+       fiq.o
+       scheduler.o
+       swi_handler.o
+       irq_handler.o
+       bringup.o
+       cpsr.o
+       event_init.o
+       button_service.o
+       tick_service.o
+       ddf_io.o
+       led_driver.o
+       serial_driver.o
+       segment_driver.o
+       mutex.o
+       cinit.o
+       cli_com.o
+       cli_readline.o
+       cli_shell.o
+       cli_serial.o
+       uid.o
+       task1_start.o 
+       task2_start.o 
+       task3_start.o)
+
+OUTPUT("slos.elf")
+
+
+ENTRY(_start)
+
+SECTIONS
+{
+
+	. = 0xa0000000;
+
+	.text ALIGN(4) : { *(.text) }
+	.rodata ALIGN(4) : { *(.rodata) }
+	.data ALIGN(4) : { *(.data) }
+	.got ALIGN(4) : { *(.got) }
+	.bss ALIGN(4) : { *(.bss) }
+
+}

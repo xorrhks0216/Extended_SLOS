@@ -1,0 +1,411 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BACK	core/cli_readline.c	75;"	d	file:
+BACKSPACE	core/cli_readline.c	86;"	d	file:
+BAUD_9600	e7t/devices/serial_driver.c	132;"	d	file:
+BOOL	headers/api_types.h	/^typedef int BOOL;$/;"	t
+BOOT_SLOS	core/cinit.c	92;"	d	file:
+BYTE	headers/api_types.h	/^typedef unsigned char BYTE;$/;"	t
+BringUp_Base	e7t/events/swis.h	104;"	d
+BringUp_FatalError	e7t/events/swis.h	106;"	d
+BringUp_Trace	e7t/events/swis.h	105;"	d
+CINITINIT	core/cinit.c	87;"	d	file:
+CLI	core/cli_com.c	/^CallBack CLI(char *cmd) $/;"	f
+COM0	e7t/devices/serial_driver.c	145;"	d	file:
+COM0	e7t/devices/serial_driver.h	69;"	d
+COM1	e7t/devices/serial_driver.c	144;"	d	file:
+COM1	e7t/devices/serial_driver.h	68;"	d
+CR	core/cli_readline.c	89;"	d	file:
+CTRL_D	core/cli_readline.c	90;"	d	file:
+C_Entry	core/cinit.c	/^int C_Entry(void)$/;"	f
+C_EntryTask1	apps/task1_start.c	/^void C_EntryTask1(void)$/;"	f
+C_EntryTask2	apps/task2_start.c	/^void C_EntryTask2(void)$/;"	f
+C_EntryTask3	apps/task3_start.c	/^void C_EntryTask3(void) $/;"	f
+CallBack	headers/api_types.h	/^typedef void (*CallBack)(void);$/;"	t
+CurrentTask	scheduler.s	/^CurrentTask:$/;"	l
+DELETE	core/cli_readline.c	87;"	d	file:
+DEVICESINIT	core/cinit.c	84;"	d	file:
+DEVICE_IN_USE	headers/api_types.h	82;"	d
+DEVICE_LED_E7T	e7t/devices/ddf_types.h	72;"	d
+DEVICE_LED_E7T	e7t/devices/led_driver.h	73;"	d
+DEVICE_NEXT	headers/api_types.h	84;"	d
+DEVICE_SEGMENT_E7T	e7t/devices/ddf_types.h	73;"	d
+DEVICE_SEGMENT_E7T	e7t/devices/segment_driver.c	76;"	d	file:
+DEVICE_SERIAL_E7T	e7t/devices/ddf_types.h	74;"	d
+DEVICE_SERIAL_E7T	e7t/devices/serial_driver.c	76;"	d	file:
+DEVICE_SUCCESS	headers/api_types.h	81;"	d
+DEVICE_UNKNOWN	headers/api_types.h	83;"	d
+DISABLE_TIMER0	e7t/headers/macros.h	96;"	d
+DISP_0	e7t/devices/segment_driver.c	99;"	d	file:
+DISP_1	e7t/devices/segment_driver.c	100;"	d	file:
+DISP_2	e7t/devices/segment_driver.c	101;"	d	file:
+DISP_3	e7t/devices/segment_driver.c	102;"	d	file:
+DISP_4	e7t/devices/segment_driver.c	103;"	d	file:
+DISP_5	e7t/devices/segment_driver.c	104;"	d	file:
+DISP_6	e7t/devices/segment_driver.c	105;"	d	file:
+DISP_7	e7t/devices/segment_driver.c	106;"	d	file:
+DISP_8	e7t/devices/segment_driver.c	107;"	d	file:
+DISP_9	e7t/devices/segment_driver.c	108;"	d	file:
+DISP_A	e7t/devices/segment_driver.c	110;"	d	file:
+DISP_B	e7t/devices/segment_driver.c	111;"	d	file:
+DISP_C	e7t/devices/segment_driver.c	112;"	d	file:
+DISP_D	e7t/devices/segment_driver.c	113;"	d	file:
+DISP_E	e7t/devices/segment_driver.c	114;"	d	file:
+DISP_F	e7t/devices/segment_driver.c	115;"	d	file:
+ENABLE_TIMER0	e7t/headers/macros.h	95;"	d
+END	core/cli_readline.c	77;"	d	file:
+ENTER	core/cli_readline.c	81;"	d	file:
+ENTERTASK	core/cinit.c	89;"	d	file:
+ENTRY	headers/api_lldebug.h	129;"	d
+ERASE	core/cli_readline.c	79;"	d	file:
+ERASE_EOL	core/cli_readline.c	80;"	d	file:
+ERASE_FWD	core/cli_readline.c	76;"	d	file:
+ERASE_LINE	core/cli_readline.c	83;"	d	file:
+ERASE_SOL	core/cli_readline.c	84;"	d	file:
+EXIT	headers/api_lldebug.h	130;"	d
+Event_IODeviceClose	e7t/events/swis.h	92;"	d
+Event_IODeviceInit	e7t/events/swis.h	90;"	d
+Event_IODeviceOpen	e7t/events/swis.h	91;"	d
+Event_IODeviceReadBit	e7t/events/swis.h	96;"	d
+Event_IODeviceReadBlock	e7t/events/swis.h	98;"	d
+Event_IODeviceReadByte	e7t/events/swis.h	94;"	d
+Event_IODeviceWriteBit	e7t/events/swis.h	95;"	d
+Event_IODeviceWriteBlock	e7t/events/swis.h	97;"	d
+Event_IODeviceWriteByte	e7t/events/swis.h	93;"	d
+FALSE	headers/api_types.h	79;"	d
+FORWARD	core/cli_readline.c	78;"	d	file:
+GET_CHAR	e7t/devices/serial_driver.c	140;"	d	file:
+GET_STATUS	e7t/devices/serial_driver.c	138;"	d	file:
+GREEN1	apps/task1_start.c	81;"	d	file:
+GREEN1	apps/task2_start.c	81;"	d	file:
+GREEN1	e7t/devices/led_driver.h	76;"	d
+GREEN2	apps/task1_start.c	84;"	d	file:
+GREEN2	apps/task2_start.c	84;"	d	file:
+GREEN2	e7t/devices/led_driver.h	79;"	d
+INIT0_TIMER0	e7t/headers/macros.h	99;"	d
+INTMSK	e7t/headers/macros.h	82;"	d
+INTPND	e7t/events/irq_handler.s	/^INTPND:$/;"	l
+INTPND	e7t/headers/macros.h	81;"	d
+INT_GLOBAL	e7t/headers/macros.h	83;"	d
+INT_SW3_MASK	e7t/headers/macros.h	85;"	d
+IOPCON	e7t/headers/macros.h	75;"	d
+IOPDATA	e7t/devices/led_driver.c	91;"	d	file:
+IOPDATA	e7t/devices/segment_driver.c	86;"	d	file:
+IOPDATA	e7t/headers/macros.h	78;"	d
+IOPMOD	e7t/devices/led_driver.c	90;"	d	file:
+IOPMOD	e7t/devices/segment_driver.c	85;"	d	file:
+IOPMOD	e7t/headers/macros.h	74;"	d
+IO_ACTIVE_HIGH_INT0	e7t/headers/macros.h	88;"	d
+IO_ENABLE_INT0	e7t/headers/macros.h	87;"	d
+IO_RISING_EDGE_INT0	e7t/headers/macros.h	89;"	d
+IRQVector	e7t/headers/macros.h	103;"	d
+IRQoFF	e7t/events/swi_handler.c	92;"	d	file:
+IRQoFF	e7t/events/swi_handler_test.c	92;"	d	file:
+IRQoN	e7t/events/swi_handler.c	91;"	d	file:
+IRQoN	e7t/events/swi_handler_test.c	91;"	d	file:
+LEDBANK	e7t/devices/led_driver.c	92;"	d	file:
+LEDBANK	e7t/events/tick_service.c	160;"	d	file:
+LED_1_OFF	e7t/devices/led_driver.c	106;"	d	file:
+LED_1_ON	e7t/devices/led_driver.c	99;"	d	file:
+LED_2_OFF	e7t/devices/led_driver.c	105;"	d	file:
+LED_2_ON	e7t/devices/led_driver.c	98;"	d	file:
+LED_3_OFF	e7t/devices/led_driver.c	104;"	d	file:
+LED_3_ON	e7t/devices/led_driver.c	97;"	d	file:
+LED_4_OFF	e7t/devices/led_driver.c	103;"	d	file:
+LED_4_OFF	e7t/events/tick_service.c	164;"	d	file:
+LED_4_ON	e7t/devices/led_driver.c	96;"	d	file:
+LED_4_ON	e7t/events/tick_service.c	163;"	d	file:
+LF	core/cli_readline.c	88;"	d	file:
+LLDEBUG	headers/api_lldebug.h	72;"	d
+LOW_LEVEL_INITIALIZATION	core/cinit.c	91;"	d	file:
+NONE	core/uid.h	78;"	d
+NextTask	scheduler.s	/^NextTask:$/;"	l
+OFF	e7t/devices/led_driver.h	82;"	d
+OFF	e7t/devices/segment_driver.c	118;"	d	file:
+OFF	e7t/devices/serial_driver.c	83;"	d	file:
+ON	e7t/devices/led_driver.h	81;"	d
+ON	e7t/devices/segment_driver.c	117;"	d	file:
+ON	e7t/devices/serial_driver.c	82;"	d	file:
+ORANGE	apps/task1_start.c	83;"	d	file:
+ORANGE	apps/task2_start.c	83;"	d	file:
+ORANGE	e7t/devices/led_driver.h	78;"	d
+PCB_BottomTask1	e7t/pcb.s	/^PCB_BottomTask1:$/;"	l
+PCB_BottomTask2	e7t/pcb.s	/^PCB_BottomTask2:$/;"	l
+PCB_BottomTask3	e7t/pcb.s	/^PCB_BottomTask3:$/;"	l
+PCB_CurrentTask	e7t/pcb.s	/^PCB_CurrentTask:$/;"	l
+PCB_PtrCurrentTask	e7t/pcb.s	/^PCB_PtrCurrentTask:$/;"	l
+PCB_PtrNextTask	e7t/pcb.s	/^PCB_PtrNextTask:$/;"	l
+PCB_PtrTask1	e7t/pcb.s	/^PCB_PtrTask1:$/;"	l
+PCB_PtrTask2	e7t/pcb.s	/^PCB_PtrTask2:$/;"	l
+PCB_PtrTask3	e7t/pcb.s	/^PCB_PtrTask3:$/;"	l
+PCB_Table	e7t/pcb.s	/^PCB_Table:$/;"	l
+PCB_TopOfIRQStack	e7t/pcb.s	/^PCB_TopOfIRQStack:$/;"	l
+PUT_CHAR	e7t/devices/serial_driver.c	142;"	d	file:
+RED	apps/task1_start.c	82;"	d	file:
+RED	apps/task2_start.c	82;"	d	file:
+RED	e7t/devices/led_driver.h	77;"	d
+REDRAW	core/cli_readline.c	82;"	d	file:
+RX_DATA	e7t/devices/serial_driver.c	139;"	d	file:
+ReadLineZ	core/cli_readline.c	/^int ReadLineZ (char *buffer,int maxlen) $/;"	f
+SEG_A	e7t/devices/segment_driver.c	91;"	d	file:
+SEG_B	e7t/devices/segment_driver.c	92;"	d	file:
+SEG_C	e7t/devices/segment_driver.c	93;"	d	file:
+SEG_D	e7t/devices/segment_driver.c	94;"	d	file:
+SEG_E	e7t/devices/segment_driver.c	95;"	d	file:
+SEG_F	e7t/devices/segment_driver.c	96;"	d	file:
+SEG_G	e7t/devices/segment_driver.c	97;"	d	file:
+SEG_MASK	e7t/devices/segment_driver.c	87;"	d	file:
+SERVICESINIT	core/cinit.c	85;"	d	file:
+SLOS	e7t/events/swis.h	84;"	d
+START	core/cli_readline.c	74;"	d	file:
+STATE	core/cinit.c	/^unsigned int STATE;$/;"	v
+SVC	e7t/events/swi_handler.c	86;"	d	file:
+SVC	e7t/events/swi_handler_test.c	86;"	d	file:
+SYSCFG	e7t/devices/led_driver.c	85;"	d	file:
+SYSCFG	e7t/devices/segment_driver.c	84;"	d	file:
+SYSCFG	e7t/devices/serial_driver.c	85;"	d	file:
+SYSCFG	e7t/headers/macros.h	71;"	d
+SYSTEM	e7t/events/swi_handler.c	85;"	d	file:
+SYSTEM	e7t/events/swi_handler_test.c	85;"	d	file:
+SwiRegs	e7t/events/swis.h	/^typedef struct SwiRegs $/;"	s
+SwiRegs	e7t/events/swis.h	/^} SwiRegs;$/;"	t	typeref:struct:SwiRegs
+TCNT0	e7t/headers/macros.h	93;"	d
+TDATA0	e7t/headers/macros.h	92;"	d
+TEST1	e7t/events/swi_handler_test.c	119;"	d	file:
+TICKINIT	core/cinit.c	86;"	d	file:
+TICKSTART	core/cinit.c	88;"	d	file:
+TMOD	e7t/headers/macros.h	91;"	d
+TOGGLE_TIMER0	e7t/headers/macros.h	98;"	d
+TRUE	headers/api_types.h	78;"	d
+TX_READY	e7t/devices/serial_driver.c	141;"	d	file:
+UART0_BASE	e7t/devices/serial_driver.c	86;"	d	file:
+UART1_BASE	e7t/devices/serial_driver.c	87;"	d	file:
+UBRDIV	e7t/devices/serial_driver.c	98;"	d	file:
+UCON	e7t/devices/serial_driver.c	94;"	d	file:
+UCRLPB	e7t/devices/serial_driver.c	115;"	d	file:
+UCRRxM	e7t/devices/serial_driver.c	112;"	d	file:
+UCRRxSI	e7t/devices/serial_driver.c	113;"	d	file:
+UCRTxM	e7t/devices/serial_driver.c	114;"	d	file:
+UID	core/uid.c	75;"	d	file:
+UID	headers/api_types.h	/^typedef int UID;$/;"	t
+UINT	core/swiapi.c	5;"	d	file:
+UINT	headers/api_types.h	/^typedef unsigned int UINT;$/;"	t
+ULCON	e7t/devices/serial_driver.c	93;"	d	file:
+ULCR8bits	e7t/devices/serial_driver.c	104;"	d	file:
+ULCRNoParity	e7t/devices/serial_driver.c	106;"	d	file:
+ULCRS1StopBit	e7t/devices/serial_driver.c	105;"	d	file:
+URXBUF	e7t/devices/serial_driver.c	97;"	d	file:
+USER	e7t/events/swi_handler.c	87;"	d	file:
+USER	e7t/events/swi_handler_test.c	87;"	d	file:
+USRBreak	e7t/devices/serial_driver.c	124;"	d	file:
+USRDTR	e7t/devices/serial_driver.c	125;"	d	file:
+USRFraming	e7t/devices/serial_driver.c	123;"	d	file:
+USROverrun	e7t/devices/serial_driver.c	121;"	d	file:
+USRParity	e7t/devices/serial_driver.c	122;"	d	file:
+USRRxData	e7t/devices/serial_driver.c	126;"	d	file:
+USRTxEmpty	e7t/devices/serial_driver.c	128;"	d	file:
+USRTxHoldEmpty	e7t/devices/serial_driver.c	127;"	d	file:
+USTAT	e7t/devices/serial_driver.c	95;"	d	file:
+UTXBUF	e7t/devices/serial_driver.c	96;"	d	file:
+_CORE_ALL	core/all.h	74;"	d
+_DEVICE_DDF_E7T_TYPES	e7t/devices/ddf_types.h	70;"	d
+_DEVICE_E7T_LED	e7t/devices/led_driver.h	71;"	d
+_HEADERS_API_TYPES	headers/api_types.h	70;"	d
+_HEADERS_E7T_ALL	e7t/headers/all.h	70;"	d
+_mainCRTStartup	start.s	/^_mainCRTStartup:$/;"	l
+_start	start.s	/^_start:$/;"	l
+aSIGNAL	core/mutex.h	77;"	d
+aWAIT	core/mutex.h	76;"	d
+bSIGNAL	core/mutex.h	82;"	d
+bWAIT	core/mutex.h	79;"	d
+backspace	core/cli_readline.c	/^static void backspace (int n) $/;"	f	file:
+backup	core/cli_readline.c	/^static void backup(char *buffer, int pos) $/;"	f	file:
+banner	apps/task3_start.c	/^void banner (void) $/;"	f
+baudrate	e7t/devices/serial_driver.c	/^unsigned int baudrate[2]; \/* baud rate of the serial port ............ *\/$/;"	m	struct:__anon5	file:
+bit	devices/ddf_frame.h	/^    BYTE 		(*bit)   (UID);$/;"	m	union:device_tree::__anon3
+bit	devices/ddf_frame.h	/^    void		(*bit)	 (UID, BYTE);$/;"	m	union:device_tree::__anon2
+block	devices/ddf_frame.h	/^    block_datastr 	*(*block) (UID);$/;"	m	union:device_tree::__anon3
+block	devices/ddf_frame.h	/^    void		(*block) (UID, block_datastr *);$/;"	m	union:device_tree::__anon2
+block_datastr	devices/ddf_frame.h	/^} block_datastr;$/;"	t	typeref:struct:data
+bringUpFatalError	core/swiapi.c	/^void bringUpFatalError(UID a)$/;"	f
+bringUpInitFIQRegisters	events/bringup.s	/^bringUpInitFIQRegisters:$/;"	l
+bringUpSetR10fiq	events/bringup.s	/^bringUpSetR10fiq:$/;"	l
+bringUpSetR8fiq	events/bringup.s	/^bringUpSetR8fiq:$/;"	l
+bringUpSetR9fiq	events/bringup.s	/^bringUpSetR9fiq:$/;"	l
+bringUpTrace	core/swiapi.c	/^void bringUpTrace(UINT a, UID b)$/;"	f
+byte	devices/ddf_frame.h	/^    BYTE 		(*byte)  (UID); $/;"	m	union:device_tree::__anon3
+byte	devices/ddf_frame.h	/^    void		(*byte)	 (UID, BYTE);$/;"	m	union:device_tree::__anon2
+cinit_init	core/cinit.c	/^void cinit_init(void)$/;"	f
+close	devices/ddf_frame.h	/^  int	(*close)	(UID);$/;"	m	struct:device_tree
+closeHost	core/cli_serial.c	/^int closeHost(void)$/;"	f
+command_line	core/cli_com.c	/^char command_line[256];$/;"	v
+coreCallSWI	swi.s	/^coreCallSWI:$/;"	l
+coreDataAbortHandler	data.s	/^coreDataAbortHandler:$/;"	l
+coreFIQHandler	fiq.s	/^coreFIQHandler:$/;"	l
+coreIRQHandler	irq.s	/^coreIRQHandler:$/;"	l
+coreInitialize	e7t/init.s	/^coreInitialize:$/;"	l
+corePrefetchAbortHandler	prefetch.s	/^corePrefetchAbortHandler:$/;"	l
+coreReservedHandler	reserved.s	/^coreReservedHandler:$/;"	l
+coreSWIHandler	swi.s	/^coreSWIHandler:$/;"	l
+coreUndefinedHandler	undef.s	/^coreUndefinedHandler:$/;"	l
+countdown	e7t/events/tick_service.c	/^UINT countdown;$/;"	v
+cpsr	e7t/events/swis.h	/^unsigned int cpsr;      \/* spsr on entry to SWI *\/$/;"	m	struct:SwiRegs
+data	devices/ddf_frame.h	/^  void 	     *data;$/;"	m	struct:data
+data	devices/ddf_frame.h	/^typedef struct data {$/;"	s
+delete	core/cli_readline.c	/^static void delete (char *buffer, int pos)$/;"	f	file:
+device_tree	devices/ddf_frame.h	/^typedef struct device_tree {$/;"	s
+device_treestr	devices/ddf_frame.h	/^} device_treestr ;$/;"	t	typeref:struct:device_tree
+devices	e7t/devices/ddf_tree.h	/^device_treestr devices[] = $/;"	v
+digits	core/cli_com.c	/^const char digits[] = "0123456789abcdef";$/;"	v
+diodes	e7t/devices/led_driver.c	/^internal_ledstr		diodes;$/;"	v
+display	e7t/devices/segment_driver.c	/^internal_segmentstr		display;$/;"	v
+driver_id	devices/ddf_frame.h	/^  UID driver_id;$/;"	m	struct:device_tree
+error_buff	core/cli_com.c	/^char *error_buff;$/;"	v
+eventButtonInit	e7t/events/button_service.c	/^void eventButtonInit(void)$/;"	f
+eventButtonMaskIrq	e7t/events/button_service.c	/^void eventButtonMaskIrq(unsigned irq) $/;"	f
+eventButtonPressed	e7t/events/button_service.c	/^void eventButtonPressed(void)$/;"	f
+eventButtonService	e7t/events/button_service.c	/^void eventButtonService(void) $/;"	f
+eventButtonUnmaskIrq	e7t/events/button_service.c	/^void eventButtonUnmaskIrq(unsigned irq1,unsigned irq2) $/;"	f
+eventButtonVeneer	e7t/events/irq_handler.s	/^eventButtonVeneer:$/;"	l
+eventIODeviceClose	core/swiapi.c	/^int eventIODeviceClose(device_treestr *a, UID b)$/;"	f
+eventIODeviceInit	core/swiapi.c	/^void eventIODeviceInit(void)$/;"	f
+eventIODeviceOpen	core/swiapi.c	/^device_treestr *eventIODeviceOpen(UID *a, UINT b, UINT c)$/;"	f
+eventIODeviceReadBit	core/swiapi.c	/^UINT eventIODeviceReadBit(device_treestr *a, UID b) $/;"	f
+eventIODeviceReadBlock	core/swiapi.c	/^void *eventIODeviceReadBlock(device_treestr *a, UID b) $/;"	f
+eventIODeviceReadByte	core/swiapi.c	/^UINT eventIODeviceReadByte(device_treestr *a, UID b) $/;"	f
+eventIODeviceWriteBit	core/swiapi.c	/^void eventIODeviceWriteBit(device_treestr *a, UID b, UINT c)$/;"	f
+eventIODeviceWriteBlock	core/swiapi.c	/^void eventIODeviceWriteBlock(device_treestr *a, UID b, void *c) $/;"	f
+eventIODeviceWriteByte	core/swiapi.c	/^void eventIODeviceWriteByte(UINT a,UINT b, UINT c) $/;"	f
+eventServicesInit	e7t/events/event_init.c	/^void eventServicesInit(void)$/;"	f
+eventTickInit	e7t/events/tick_service.c	/^void eventTickInit (UINT msec)$/;"	f
+eventTickService	e7t/events/tick_service.c	/^void eventTickService(void) $/;"	f
+eventTickStart	e7t/events/tick_service.c	/^void eventTickStart(void)$/;"	f
+eventTickVeneer	e7t/events/irq_handler.s	/^eventTickVeneer:$/;"	l
+eventsIRQHandler	e7t/events/irq_handler.s	/^eventsIRQHandler:$/;"	l
+eventsSWIHandler	e7t/events/swi_handler.c	/^CallBack eventsSWIHandler(int swi_number, SwiRegs *r) $/;"	f
+eventsSWIHandler	e7t/events/swi_handler.s	/^eventsSWIHandler:$/;"	l
+eventsSWIHandler	e7t/events/swi_handler_test.c	/^CallBack eventsSWIHandler(int swi_number, SwiRegs *r) $/;"	f
+formatString	core/cli_com.c	/^void formatString(const char *fmt, void (*putc)(int), va_list args) $/;"	f
+gpbuff	core/cli_com.c	/^char gpbuff[256];$/;"	v
+handleReportedError	core/cli_com.c	/^CallBack handleReportedError(void) $/;"	f
+handler_contextswitch	scheduler.s	/^handler_contextswitch:$/;"	l
+host	core/cli_serial.c	/^device_treestr *host;$/;"	v
+init	devices/ddf_frame.h	/^  void 	(*init)   	(void);$/;"	m	struct:device_tree
+insert	core/cli_readline.c	/^static int insert (char *buffer, int pos, int c) $/;"	f	file:
+internalSerialE7TSetup	e7t/devices/serial_driver.c	/^void internalSerialE7TSetup(unsigned int port, unsigned int baud)$/;"	f
+internal_ledstr	e7t/devices/led_driver.c	/^} internal_ledstr;$/;"	t	typeref:struct:__anon6	file:
+internal_segmentstr	e7t/devices/segment_driver.c	/^} internal_segmentstr;$/;"	t	typeref:struct:__anon4	file:
+internal_serial_read	e7t/devices/serial_driver.c	/^BYTE internal_serial_read(unsigned int port)$/;"	f
+internal_serial_write	e7t/devices/serial_driver.c	/^void internal_serial_write(unsigned int port,BYTE c)		$/;"	f
+internal_serialstr	e7t/devices/serial_driver.c	/^} internal_serialstr;$/;"	t	typeref:struct:__anon5	file:
+internal_write_dec	core/cli_com.c	/^void internal_write_dec(unsigned w, void (*putc)(int)) $/;"	f
+internal_write_hex	core/cli_com.c	/^void internal_write_hex(unsigned w, void (*putc)(int)) $/;"	f
+ioCloseDriver	devices/ddf_io.c	/^int ioCloseDriver(device_treestr *d, UID id) $/;"	f
+ioInitializeDrivers	devices/ddf_io.c	/^void ioInitializeDrivers(void) $/;"	f
+ioOpenDriver	devices/ddf_io.c	/^device_treestr *ioOpenDriver(int *id,unsigned int major,unsigned int minor) $/;"	f
+ioReadBit	devices/ddf_io.c	/^BYTE ioReadBit(device_treestr *d,UID id) $/;"	f
+ioReadBlock	devices/ddf_io.c	/^block_datastr *ioReadBlock (device_treestr *d,UID id) $/;"	f
+ioReadByte	devices/ddf_io.c	/^BYTE ioReadByte(device_treestr *d,UID id) $/;"	f
+ioWriteBit	devices/ddf_io.c	/^void ioWriteBit(device_treestr *d,UID id,BYTE bit) $/;"	f
+ioWriteBlock	devices/ddf_io.c	/^void ioWriteBlock(device_treestr *d,UID id, block_datastr *block) $/;"	f
+ioWriteByte	devices/ddf_io.c	/^void ioWriteByte(device_treestr *d,UID id,BYTE byte) $/;"	f
+kernelScheduler	scheduler.s	/^kernelScheduler:$/;"	l
+led	e7t/devices/led_driver.c	/^unsigned char led[4]; $/;"	m	struct:__anon6	file:
+ledNode	e7t/events/button_service.c	/^device_treestr *ledNode;$/;"	v
+ledUID	e7t/events/button_service.c	/^UID ledUID;$/;"	v
+led_close	e7t/devices/led_driver.c	/^int led_close(UID id) $/;"	f
+led_init	e7t/devices/led_driver.c	/^void led_init(void) $/;"	f
+led_open	e7t/devices/led_driver.c	/^UID led_open(unsigned int major,unsigned int minor) $/;"	f
+led_read_bit	e7t/devices/led_driver.c	/^BYTE led_read_bit(UID id) $/;"	f
+led_write_bit	e7t/devices/led_driver.c	/^void led_write_bit(UID id,BYTE led_set) $/;"	f
+llfatalerror	headers/api_lldebug.h	151;"	d
+lltrace	headers/api_lldebug.h	135;"	d
+lltraceafter	headers/api_lldebug.h	133;"	d
+lltracebefore	headers/api_lldebug.h	132;"	d
+modifyControlCPSR	events/cpsr.s	/^modifyControlCPSR:$/;"	l
+mutex_gatelock	core/mutex.c	/^void mutex_gatelock (void) $/;"	f
+mutex_gateunlock	core/mutex.c	/^void mutex_gateunlock (void) $/;"	f
+name	devices/ddf_frame.h	/^  char  name[12];$/;"	m	struct:device_tree
+newLine	core/cli_com.c	/^void newLine(void) $/;"	f
+new_uid	core/uid.c	/^unsigned int new_uid = 1;$/;"	v
+node	e7t/devices/serial_driver.c	/^internal_serialstr		node;$/;"	v
+numeric_display	e7t/devices/segment_driver.c	/^static unsigned int numeric_display [16] = $/;"	v	file:
+oled	apps/task2_start.c	/^UID oled;$/;"	v
+open	devices/ddf_frame.h	/^  UID	(*open)   	(unsigned int, unsigned int);$/;"	m	struct:device_tree
+openHost	core/cli_serial.c	/^BOOL openHost(UINT com) $/;"	f
+openOrangeLED	apps/task2_start.c	/^BOOL openOrangeLED (void) $/;"	f
+openRedLED	apps/task1_start.c	/^BOOL openRedLED(void) $/;"	f
+orange_host	apps/task2_start.c	/^device_treestr *orange_host;$/;"	v
+pc	e7t/events/swis.h	/^unsigned int pc;        \/* lr on entry to SWI *\/$/;"	m	struct:SwiRegs
+pcbSetUp	e7t/pcb.s	/^pcbSetUp:$/;"	l
+prettyC	core/cli_com.c	/^void prettyC(int c) $/;"	f
+prettyPrint	core/cli_com.c	/^void prettyPrint(const char *fmt, ...) $/;"	f
+printToHost	core/cli_serial.c	/^void printToHost(char *s)$/;"	f
+ptrPCBTable	start.s	/^ptrPCBTable:$/;"	l
+r	core/swiapi.c	/^ unsigned int r[4];$/;"	m	struct:__anon1	file:
+r	e7t/events/swis.h	/^unsigned int r[13];     \/* R0 - R12 *\/$/;"	m	struct:SwiRegs
+read	devices/ddf_frame.h	/^    } read;$/;"	m	struct:device_tree	typeref:union:device_tree::__anon3
+readC	core/cli_com.c	/^int readC(void) $/;"	f
+readCharFromHost	core/cli_serial.c	/^char readCharFromHost(void)$/;"	f
+readLine	core/cli_readline.c	/^int readLine (char *prompt, char *buffer, int maxlen) $/;"	f
+red_host	apps/task1_start.c	/^device_treestr *red_host;$/;"	v
+redraw_eol	core/cli_readline.c	/^static void redraw_eol (char *buffer, int pos) $/;"	f	file:
+redraw_line	core/cli_readline.c	/^static void redraw_line(char *prompt, char *buffer, int pos) $/;"	f	file:
+registerstr	core/swiapi.c	/^} registerstr;$/;"	t	typeref:struct:__anon1	file:
+reportC	core/cli_com.c	/^void reportC(int c) $/;"	f
+reportError	core/cli_com.c	/^CallBack reportError(unsigned errno, const char *fmt, ...) $/;"	f
+reportOK	core/cli_com.c	/^CallBack reportOK(void) $/;"	f
+report_buff	core/cli_com.c	/^char *report_buff;$/;"	v
+rled	apps/task1_start.c	/^UID rled;$/;"	v
+rs	core/swiapi.c	/^registerstr rs;$/;"	v
+seg	e7t/devices/segment_driver.c	/^	unsigned char seg; $/;"	m	struct:__anon4	file:
+segment_close	e7t/devices/segment_driver.c	/^int segment_close(UID id) $/;"	f
+segment_init	e7t/devices/segment_driver.c	/^void segment_init (void)$/;"	f
+segment_open	e7t/devices/segment_driver.c	/^UID segment_open(unsigned int major,unsigned int ignore) $/;"	f
+segment_read_byte	e7t/devices/segment_driver.c	/^BYTE  segment_read_byte(UID id) $/;"	f
+segment_set	e7t/devices/segment_driver.c	/^void segment_set(BYTE seg)$/;"	f
+segment_setdisplay	e7t/devices/segment_driver.c	/^void segment_setdisplay(unsigned d)$/;"	f
+segment_write_byte	e7t/devices/segment_driver.c	/^void segment_write_byte(UID id,BYTE seg) $/;"	f
+semaphore	core/mutex.c	/^unsigned volatile int semaphore	= 2; \/* this is a start value *\/$/;"	v
+serial	core/cli_serial.c	/^UID serial;$/;"	v
+serial_close	e7t/devices/serial_driver.c	/^int serial_close(UID id) $/;"	f
+serial_init	e7t/devices/serial_driver.c	/^void serial_init(void)$/;"	f
+serial_open	e7t/devices/serial_driver.c	/^UID serial_open(unsigned int major,unsigned int com) $/;"	f
+serial_read_byte	e7t/devices/serial_driver.c	/^BYTE  serial_read_byte(UID id) $/;"	f
+serial_write_byte	e7t/devices/serial_driver.c	/^void serial_write_byte(UID id,BYTE data) $/;"	f
+shell	core/cli_shell.c	/^void shell(void) $/;"	f
+size	devices/ddf_frame.h	/^  unsigned int size;$/;"	m	struct:data
+start	start.s	/^start:$/;"	l
+switchOffOrangeLED	apps/task2_start.c	/^void switchOffOrangeLED (void)$/;"	f
+switchOffRedLED	apps/task1_start.c	/^void switchOffRedLED(void)$/;"	f
+switchOnOrangeLED	apps/task2_start.c	/^void switchOnOrangeLED (void)$/;"	f
+switchOnRedLED	apps/task1_start.c	/^void switchOnRedLED(void)$/;"	f
+switchToFIQMode	events/bringup.s	/^switchToFIQMode:$/;"	l
+switchToSVCMode	events/bringup.s	/^switchToSVCMode:$/;"	l
+tIOPDATA	e7t/events/tick_service.c	159;"	d	file:
+uid	e7t/devices/led_driver.c	/^unsigned char uid[4];$/;"	m	struct:__anon6	file:
+uid	e7t/devices/segment_driver.c	/^	int 	      uid;$/;"	m	struct:__anon4	file:
+uid	e7t/devices/serial_driver.c	/^unsigned int uid[2];      \/* lock[0] = COM1 lock[1] = COM2 ........... *\/$/;"	m	struct:__anon5	file:
+uid_generate	core/uid.c	/^UID uid_generate(void) $/;"	f
+vectorDataAbort	start.s	/^vectorDataAbort:     $/;"	l
+vectorFIQ	start.s	/^vectorFIQ:           $/;"	l
+vectorIRQ	start.s	/^vectorIRQ:           $/;"	l
+vectorPrefetchAbort	start.s	/^vectorPrefetchAbort: $/;"	l
+vectorReserved	start.s	/^vectorReserved:      $/;"	l
+vectorReset	start.s	/^vectorReset:$/;"	l
+vectorSWI	start.s	/^vectorSWI:           $/;"	l
+vectorUndefined	start.s	/^vectorUndefined:     $/;"	l
+write	devices/ddf_frame.h	/^    } write;$/;"	m	struct:device_tree	typeref:union:device_tree::__anon2
+write0	core/cli_com.c	/^void write0(char *s) $/;"	f
+writeC	core/cli_com.c	/^void writeC(int c) $/;"	f
+writeCharToHost	core/cli_serial.c	/^void writeCharToHost(char c)$/;"	f
+writeDec	core/cli_com.c	/^void writeDec(unsigned w) $/;"	f
+writeHex	core/cli_com.c	/^void writeHex(unsigned w) $/;"	f
+xLED	e7t/events/tick_service.c	/^unsigned int xLED = 0;$/;"	v
+xmemmove	core/cli_readline.c	/^void xmemmove(char *s, char *t,int n)$/;"	f
+xstrcpy	core/cli_readline.c	/^void xstrcpy (char *s, char *t)$/;"	f
+xstrlen	core/cli_readline.c	/^int xstrlen (char *p)$/;"	f

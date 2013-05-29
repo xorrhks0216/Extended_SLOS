@@ -1,0 +1,268 @@
+/*
+ *  ____________________________________________________________________
+ * 
+ *  Copyright (c) 2002, Andrew N. Sloss, Chris Wright and Dominic Symes
+ *  All rights reserved.
+ *  ____________________________________________________________________
+ * 
+ *  NON-COMMERCIAL USE License
+ *  
+ *  Redistribution and use in source and binary forms, with or without 
+ *  modification, are permitted provided that the following conditions 
+ *  are met: 
+ *  
+ *  1. For NON-COMMERCIAL USE only.
+ * 
+ *  2. Redistributions of source code must retain the above copyright 
+ *     notice, this list of conditions and the following disclaimer. 
+ * 
+ *  3. Redistributions in binary form must reproduce the above 
+ *     copyright notice, this list of conditions and the following 
+ *     disclaimer in the documentation and/or other materials provided 
+ *     with the distribution. 
+ * 
+ *  4. All advertising materials mentioning features or use of this 
+ *     software must display the following acknowledgement:
+ * 
+ *     This product includes software developed by Andrew N. Sloss,
+ *     Chris Wright and Dominic Symes. 
+ * 
+ *   THIS SOFTWARE IS PROVIDED BY THE CONTRIBUTORS ``AS IS'' AND ANY 
+ *   EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ *   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR 
+ *   PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE CONTRIBUTORS BE 
+ *   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, 
+ *   OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+ *   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+ *   OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY 
+ *   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+ *   TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
+ *   OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+ *   OF SUCH DAMAGE. 
+ * 
+ *  If you have questions about this license or would like a different
+ *  license please email :
+ * 
+ * 	andrew@sloss.net
+ * 
+ * 
+ */
+ 
+/*****************************************************************************
+ * Simple Little Operating System - SLOS
+ *****************************************************************************/
+
+/*****************************************************************************
+ *
+ * Module       : segment_driver.c
+ * Description  : low level device driver for 7-segment display 
+ *                provided on the e7t
+ * OS           : SLOS 0.09
+ * Platform     : e7t
+ * History      :
+ *
+ * 24th November 2001 Andrew N. Sloss
+ * - converted segment driver to the Wright Device Driver Framework.
+ *
+ *****************************************************************************/
+
+/*****************************************************************************
+ * IMPORT
+ *****************************************************************************/
+
+#include "../../devices/ddf_frame.h"
+#include "segment_driver.h"
+#include "../headers/reg.h"
+
+#define DEVICE_SEGMENT_LDS2000  55095
+
+/*****************************************************************************
+ * MACROS
+ *****************************************************************************/
+#define ACCESS_VALUE    0x5AA8
+#define SEGMENTPORT	0x14080000
+#define SEGMENTBANK	__REG8(SEGMENTPORT)
+
+#define SEGMENT0_INIT	0x00
+#define SEGMENT1_INIT	0x10
+#define SEGMENT2_INIT	0x20
+#define SEGMENT3_INIT	0x30
+#define SEGMENT4_INIT	0x40
+
+#define ON		1
+#define OFF		0
+
+/*****************************************************************************
+ * DATATYPES
+ *****************************************************************************/
+
+typedef struct {
+	BYTE  seg[5]; 
+	int 	      uid[5];
+} internal_segmentstr;
+
+/*****************************************************************************
+ * STATICS
+ *****************************************************************************/
+
+internal_segmentstr		display;
+
+
+void segment_set (BYTE seg);
+
+/* -- segment_init ------------------------------------------------------------
+ *
+ * Description  : initalize the segment device driver internal 
+ *                data structures and hardware. Set segment's 
+ *                to display zero.
+ * 
+ * Parameters   : none...
+ * Return       : none...
+ * Other        : none...
+ *
+ */
+
+void segment_init (void)
+{
+/* initalize physical device ... */
+__REG(MEM_CTL_BASE+MSC2) = ACCESS_VALUE;
+SEGMENTBANK = 0;
+
+
+/* setup internal structure ... */
+
+display.uid[0]	= NONE;
+display.uid[1]	= NONE;
+display.uid[2]	= NONE;
+display.uid[3]	= NONE;
+display.uid[4]	= NONE;
+
+display.seg[0] 	= SEGMENT0_INIT; 
+display.seg[1] 	= SEGMENT1_INIT; 
+display.seg[2] 	= SEGMENT2_INIT; 
+display.seg[3] 	= SEGMENT3_INIT; 
+display.seg[4] 	= SEGMENT4_INIT; 
+
+}
+
+/* -- segment_open ------------------------------------------------------------
+ *
+ * Description : open the segment device driver 
+ * 
+ * Parameters  : unsigned major = DEVICE_SEGMENT_LDS2000 
+ *             : unsigned minor = position
+ * Return      : if (success) return DEVICE_SEGMENT_LDS2000 
+ *                else if (alreadyopen) return DEVICE_IN_USE
+ *                else if (unknown) return DEVICE_NEXT
+ * Other       : 
+ *
+ */
+
+UID segment_open(unsigned int major,unsigned int minor) 
+{
+
+  if (major==DEVICE_SEGMENT_LDS2000)
+  {
+    if (minor < 5) 
+    {
+      if (display.uid[minor]==NONE)
+      {
+        display.uid[minor] = uid_generate ();
+        return display.uid[minor];      /* unique ID */
+      }
+      else
+      {
+        return DEVICE_IN_USE;	
+      }
+    }
+  } 
+
+return DEVICE_NEXT;
+}
+
+/* -- segment_close -----------------------------------------------------------
+ *
+ * Description  : close open handle to segment display 
+ * 
+ * Parameters   : UID id 
+ * Return       : 
+ *   DEVICE_SUCCESS - successfully close the device
+ *   DEVICE_UNKNOWN - couldn't identify the UID
+ * Other        : 
+ *
+ */
+
+int segment_close(UID id) 
+{
+  int i;
+  BYTE location=0;
+  for(i=0;i<=4;i++){
+	  if (display.uid[i]==id) 
+	  {
+		  display.uid[i] = NONE;
+		  display.seg[i] = location;
+		  return DEVICE_SUCCESS;
+	  }
+	  location+=0x10;
+  }
+  return DEVICE_UNKNOWN;
+}
+
+/* -- segment_write_byte ------------------------------------------------------
+ *
+ * Description  : write a particular bit to an LED 
+ * 
+ * Parameters   : UID id = 55095 + unit (0..4)
+ *              : BYTE led_set - least significant bit is used
+ * Return       : none...
+ *
+ * Other        : an example of a led write bit
+ *
+ */
+
+void segment_write_byte(UID id,BYTE seg) 
+{
+  int i,j;
+  BYTE location=0;
+
+
+  for(i=0;i<=4;i++)
+  {
+	  if (display.uid[i]==id) 
+	  {
+		  display.seg[i] = location+seg;
+   	  SEGMENTBANK = display.seg[j];
+		break;	
+	  }
+	  location+=0x10;
+  }
+
+}
+
+/* -- segment_read_byte -------------------------------------------------------
+ *
+ * Description  : read a particular bit value 
+ * 
+ * Parameters   : UID id = 55075 + unit (0..3)
+ * Return       : value return error if 255
+ *
+ * Other        : an example of a led read bit
+ */
+
+BYTE  segment_read_byte(UID id) 
+{
+  int i;
+  for(i=0;i<=4;i++)
+  {
+	  if (display.uid[i]==id) 
+	  {  
+	  return display.seg[i];
+	  }
+  }
+/* 
+ * error flag goes here...
+ */
+
+return 255;
+}
+
