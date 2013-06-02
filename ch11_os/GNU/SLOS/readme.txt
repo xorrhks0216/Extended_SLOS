@@ -1,3 +1,4 @@
+
 <base>SLOS
 
   <base> SLOS is a version of the SLOS operating system that does not use 
@@ -5,15 +6,15 @@
 
 Processor Supported
 
-  PXA255
+  ARM7TDMI
 
 Board Supported
 
-  ARM LDS2000
+  ARM Evaluator-7T
 
 Host Platform
 
-  Ubuntu 10.04
+  Microsofts Windows XP
 
 Build Process
 
