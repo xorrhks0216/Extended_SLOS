@@ -230,8 +230,10 @@ return DEVICE_UNKNOWN;
 void led_write_byte(UID id,BYTE led_set) 
 {
 
-if ((diodes.uid==id)&&(diodes.uid!=NONE)) 
+if ((diodes.uid==id)&&(diodes.uid!=NONE)) {
 	LEDBANK=led_set;
+	diodes.led=led_set;
+	}
 }
 
 /* -- led_read_bit ------------------------------------------------------------

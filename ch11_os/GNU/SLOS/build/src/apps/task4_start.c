@@ -47,122 +47,102 @@
  * 
  * 
  */
- 
 /*****************************************************************************
  * Simple Little Operating System - SLOS
  *****************************************************************************/
 
 /*****************************************************************************
  *
- * Modules      : ddf_tree.h
- * Description  : device driver tree
- * OS           : SLOS 0.09
+ * Module       : task3_start.c
+ * Description  : this application provides the SLOS command line.
+ * OS           : SLOS 0.09	
  * Platform     : e7t
  * History      :
  *
- * 20th November 2001 Andrew N. Sloss
- * - created the first device driver tree
+ * November 5th 2001 - Andrew N. Sloss
+ * - created a simple command line calling task.
  *
+ *****************************************************************************/
+
+/*****************************************************************************
+ * DATATYPE
  *****************************************************************************/
 
 /*****************************************************************************
  * IMPORT
  *****************************************************************************/
 
-#include "../../devices/ddf_frame.h"
-#include "../devices/led_driver.h"
-#include "../devices/segment_driver.h"
-#include "../devices/serial_driver.h"
-#include "../devices/keypad_driver.h"
-/*****************************************************************************
- * DEVICES
- *****************************************************************************/
-
-#include "../devices/ddf_types.h"
+#include "../core/all.h"
+#include "../core/cli_shell.h"
 
 /*****************************************************************************
- * STRUCTURE
+ * GLOBAL
  *****************************************************************************/
 
-/* -- device_treestr ----------------------------------------------------------
- *
- * Description : complete static device drive tree
- *
- */
- 
-device_treestr devices[] = 
-{
+/* none... */
 
-/* ------------------------------------------------------------------------
- * LED device
- *
- * Simple LED device driver controls 4 leds 
- */
-  {
-  "LED",
-  DEVICE_LED_LDS2000,  	
-  led_init, 
-  led_open,
-  led_close,
-    {led_write_byte},
-    {led_read_byte}
-  } ,
+/*****************************************************************************
+ * ROUTINES
+ *****************************************************************************/
+#define KEYPAD 0
+device_treestr *keypad_host;
+UID keypad;
 
-/* ------------------------------------------------------------------------
- * Segment device
- *
- * 7-Segment display device driver controls 
- */
 
-  {
-  "SEGMENT",
-  DEVICE_SEGMENT_LDS2000,  	
-  segment_init, 
-  segment_open,
-  segment_close,
-    {segment_write_byte},
-    {segment_read_byte}
-  },
-/* ------------------------------------------------------------------------
- * Serial device
- *
- * serial display device driver controls 
- */
 
-  {
-  "SERIAL",
-  DEVICE_SERIAL_LDS2000,
-  serial_init,
-  serial_open,
-  serial_close,
-    {serial_write_byte},
-    {serial_read_byte}
-  },
+BOOL openKEYPAD(void) 
+{ 
+volatile int delay;
+   keypad_host = eventIODeviceOpen(&keypad,DEVICE_KEYPAD_LDS2000,KEYPAD);
 
-/* ------------------------------------------------------------------------
- * Key pad device
- *
- * key pad device driver controls key pad
- */
+  if (keypad_host==0) {
 
-  {
-  "KEYPAD",
-  DEVICE_KEYPAD_LDS2000,
-  keypad_init,
-  keypad_open,
-  keypad_close,
-    {keypad_write_byte},
-    {keypad_read_byte}
-  },
-
-/* -- End of tree -- */
-
-  {
-  "\0",
-  0,
-  0,
-  0,
-  0
+    while (1) 
+    {
+    delay=0xBEEF0401;
+    };
+  return FALSE;
   }
-};
+//printToHost ("- initialized ...... OK\n\r");
+return TRUE; 
+}
+
+BYTE readKeypadValue()
+{return eventIODeviceReadByte(keypad_host,keypad);}
+
+
+/* -- C_EntryTask4 ------------------------------------------------------------
+ *
+ * Description : C entry point into application task4
+ * 
+ * Parameters  : none...
+ * Return      : none...
+ * Other       :
+ *
+ * This routine never terminates
+ *
+ */
+
+
+void C_EntryTask4(void) 
+{
+  volatile int delay;/*
+  if(openKEYPAD() == TRUE)
+	{
+	   while(1){
+			delay=0xbeef004;
+		}
+	
+	}
+	else {
+  while (1) 
+  {
+  delay=0xbeef004;
+  }
+}*/
+while (1) 
+  {
+  delay=0xbeef004;
+  }
+}
 

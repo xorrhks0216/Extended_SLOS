@@ -30,6 +30,8 @@
      .global PCB_BottomTask2
      .global PCB_PtrTask3
      .global PCB_BottomTask3
+     .global PCB_PtrTask4
+     .global PCB_BottomTask4
      .global pcbSetUp
      
 /*
@@ -58,6 +60,7 @@ PCB_Table:
      .word     PCB_PtrTask1
      .word     PCB_PtrTask2
      .word     PCB_PtrTask3
+     .word     PCB_PtrTask4
 
 PCB_TopOfIRQStack:
      .word     0xa0380000
@@ -82,5 +85,9 @@ PCB_PtrTask2:
 PCB_BottomTask3:
      .skip 68
 PCB_PtrTask3:
+
+PCB_BottomTask4:
+     .skip 68
+PCB_PtrTask4:
 
      .end

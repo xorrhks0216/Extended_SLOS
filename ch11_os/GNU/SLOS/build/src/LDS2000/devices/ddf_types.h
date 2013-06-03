@@ -57,7 +57,7 @@
  * Modules      : ddf_types.h
  * Description  : Device Driver Types
  * OS           : SLOS 0.09
- * Platform     : e7t
+ * Platform     : LDS2000
  * History      :
  *
  * 15 July 2002 Andrew N. Sloss
@@ -69,9 +69,9 @@
 
 #define _DEVICE_DDF_LDS2000_TYPES 1
 
-#define DEVICE_LED_LDS2000 		55075   /* range 55075 - 55082 ....... */ 
+#define DEVICE_LED_LDS2000 	55075   /* range 55075 - 55082 ....... */ 
 #define DEVICE_SERIAL_LDS2000	55090   /* range 55090 - 55091 ....... */
 #define DEVICE_SEGMENT_LDS2000	55095	/* range 55095 - none  ....... */
-
+#define DEVICE_KEYPAD_LDS2000	55100
 
 #endif

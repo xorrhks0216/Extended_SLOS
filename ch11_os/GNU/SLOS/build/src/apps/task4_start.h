@@ -54,115 +54,33 @@
 
 /*****************************************************************************
  *
- * Modules      : ddf_tree.h
- * Description  : device driver tree
- * OS           : SLOS 0.09
+ * Module       : task3_start.c
+ * Description  : application that provide the SLOS command line.
+ * OS           : SLOS 0.09	
  * Platform     : e7t
  * History      :
  *
- * 20th November 2001 Andrew N. Sloss
- * - created the first device driver tree
+ * November 5th 2001 - Andrew N. Sloss
+ * - created a simple command line calling task.
  *
  *****************************************************************************/
 
 /*****************************************************************************
- * IMPORT
+ * ROUTINES
  *****************************************************************************/
 
-#include "../../devices/ddf_frame.h"
-#include "../devices/led_driver.h"
-#include "../devices/segment_driver.h"
-#include "../devices/serial_driver.h"
-#include "../devices/keypad_driver.h"
-/*****************************************************************************
- * DEVICES
- *****************************************************************************/
-
-#include "../devices/ddf_types.h"
-
-/*****************************************************************************
- * STRUCTURE
- *****************************************************************************/
-
-/* -- device_treestr ----------------------------------------------------------
+/* -- C_TaskEntry3 ------------------------------------------------------------
  *
- * Description : complete static device drive tree
+ * Description : Entry point for application task3
+ * 
+ * Parameters  : none...
+ * Return      : none...
+ * Other       :
+ *
+ *	This routine never ends
  *
  */
  
-device_treestr devices[] = 
-{
+void C_TaskEntry3(void);
 
-/* ------------------------------------------------------------------------
- * LED device
- *
- * Simple LED device driver controls 4 leds 
- */
-  {
-  "LED",
-  DEVICE_LED_LDS2000,  	
-  led_init, 
-  led_open,
-  led_close,
-    {led_write_byte},
-    {led_read_byte}
-  } ,
-
-/* ------------------------------------------------------------------------
- * Segment device
- *
- * 7-Segment display device driver controls 
- */
-
-  {
-  "SEGMENT",
-  DEVICE_SEGMENT_LDS2000,  	
-  segment_init, 
-  segment_open,
-  segment_close,
-    {segment_write_byte},
-    {segment_read_byte}
-  },
-/* ------------------------------------------------------------------------
- * Serial device
- *
- * serial display device driver controls 
- */
-
-  {
-  "SERIAL",
-  DEVICE_SERIAL_LDS2000,
-  serial_init,
-  serial_open,
-  serial_close,
-    {serial_write_byte},
-    {serial_read_byte}
-  },
-
-/* ------------------------------------------------------------------------
- * Key pad device
- *
- * key pad device driver controls key pad
- */
-
-  {
-  "KEYPAD",
-  DEVICE_KEYPAD_LDS2000,
-  keypad_init,
-  keypad_open,
-  keypad_close,
-    {keypad_write_byte},
-    {keypad_read_byte}
-  },
-
-/* -- End of tree -- */
-
-  {
-  "\0",
-  0,
-  0,
-  0,
-  0
-  }
-};
 
