@@ -70,6 +70,7 @@
  *****************************************************************************/
 
 #include "../core/mutex.h"
+#include "../core/ipc.h"
 
 #include "../headers/api_types.h"
 #include "../devices/ddf_io.h"
@@ -79,6 +80,7 @@
 #include "../headers/api_device.h"
 
 #define SEGMENT0 0
+
 /*****************************************************************************
  * STATICS
  *****************************************************************************/
@@ -123,17 +125,22 @@ void showSegment0(BYTE value)
 void C_EntryTask2(void)
 {
 volatile int delay;
-int temp=0,i=0;
+int temp=0,i=0,b=0;
   if (openSegment0()==TRUE)
   {
+	 
     while (1) 
     {
 	temp=0;
+for (delay=0; delay<0x04ffff; delay++) {}
+	b = readFIFO(1);
+	if(b==-1)
+		continue;
 	for(i=0;i<8;i++){
-		temp+=(ledValue>>i)%2;
+		temp+=(b>>i)%2;
 	}
 		showSegment0((BYTE)temp);	
-	bSIGNAL;
+	//bSIGNAL;
     }
   }
 

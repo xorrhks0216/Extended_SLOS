@@ -431,11 +431,22 @@ return handleReportedError();
 
 CallBack CLI(char *cmd) 
 {
+	int i;
 
 /*
   while (*cmd == ' ') cmd++;
     if (!*cmd) return reportOK();
 */
-return reportOK();
+	if(cmd[0] == '1')
+	{	
+		printToHost("current FIFO 1st data number \n\r");
+		prettyPrint("%d", getLength(1));
+	}else if(cmd[0] == '2') {
+		writeFIFO(1, 127);
+	}else	if(cmd[0] == '3')
+	{
+		asm("mov pc,#0");
+	}
+	return reportOK();
 }
 

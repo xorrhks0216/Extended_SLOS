@@ -28,7 +28,6 @@ ddf_io.o \
 led_driver.o \
 serial_driver.o \
 segment_driver.o \
-keypad_driver.o\
 mutex.o \
 cinit.o \
 cli_com.o \
@@ -39,7 +38,7 @@ uid.o \
 task1_start.o \
 task2_start.o \
 task3_start.o \
-task4_start.o
+ipc.o
 
 all : ${OBJS}
 	${LINKER} -o ../image/slos.elf -T linker.dat
@@ -114,9 +113,6 @@ serial_driver.o : ../src/LDS2000/devices/serial_driver.c
 segment_driver.o : ../src/LDS2000/devices/segment_driver.c
 	${CC} ${CFLAGS} -o $@ $<
  
-keypad_driver.o : ../src/LDS2000/devices/keypad_driver.c
-	${CC} ${CFLAGS} -o $@ $<
-
 mutex.o : ../src/core/mutex.c
 	${CC} ${CFLAGS} -o $@ $<
  
@@ -147,7 +143,7 @@ task2_start.o : ../src/apps/task2_start.c
 task3_start.o : ../src/apps/task3_start.c
 	${CC} ${CFLAGS} -o $@ $<
 
-task4_start.o : ../src/apps/task4_start.c
+ipc.o : ../src/core/ipc.c
 	${CC} ${CFLAGS} -o $@ $<
 
 clean:

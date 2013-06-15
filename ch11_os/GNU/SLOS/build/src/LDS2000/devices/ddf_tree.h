@@ -73,7 +73,7 @@
 #include "../devices/led_driver.h"
 #include "../devices/segment_driver.h"
 #include "../devices/serial_driver.h"
-#include "../devices/keypad_driver.h"
+
 /*****************************************************************************
  * DEVICES
  *****************************************************************************/
@@ -138,23 +138,6 @@ device_treestr devices[] =
     {serial_write_byte},
     {serial_read_byte}
   },
-
-/* ------------------------------------------------------------------------
- * Key pad device
- *
- * key pad device driver controls key pad
- */
-
-  {
-  "KEYPAD",
-  DEVICE_KEYPAD_LDS2000,
-  keypad_init,
-  keypad_open,
-  keypad_close,
-    {keypad_write_byte},
-    {keypad_read_byte}
-  },
-
 /* -- End of tree -- */
 
   {

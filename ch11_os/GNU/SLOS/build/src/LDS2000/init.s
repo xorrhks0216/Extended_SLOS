@@ -21,10 +21,8 @@
      .extern C_Entry
      .extern C_EntryTask2
      .extern C_EntryTask3
-     .extern C_EntryTask4
      .extern PCB_PtrTask2
      .extern PCB_PtrTask3
-     .extern PCB_PtrTask4
      .extern PCB_CurrentTask
      .extern pcbSetUp
 
@@ -66,17 +64,12 @@ coreInitialize:
 */
      LDR     r0,=C_EntryTask2    
      LDR     r1,=PCB_PtrTask2
-     MOV     r2, #0x30000
+     MOV     r2, #0x60000
      BL      pcbSetUp
 
      LDR     r0,=C_EntryTask3     
      LDR     r1,=PCB_PtrTask3
-     MOV     r2, #0x20000
-     BL      pcbSetUp
-
-     LDR     r0,=C_EntryTask4 
-     LDR     r1,=PCB_PtrTask4
-     MOV     r2, #0x40000
+     MOV     r2, #0x30000
      BL      pcbSetUp
 
 @ -- set the current ID to TASK1 ...........

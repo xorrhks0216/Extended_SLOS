@@ -179,10 +179,11 @@ int C_Entry(void)
   * -------------------------------------------------------------------
   */
 __REG((unsigned int) BOOT_SWI) = 0xe51ff004;		// ldr pc, [pc, #-4]
-__REG((unsigned int)(BOOT_SWI+1))= (unsigned int)0xa0000008;	
+__REG((unsigned int)(BOOT_SWI+1))= (unsigned int)0xa000002C;	
 
 __REG((unsigned int) BOOT_IRQ) = 0xe51ff004;		// ldr pc, [pc, #-4]
-__REG((unsigned int)(BOOT_IRQ+1))= (unsigned int)0xa0000018;
+__REG((unsigned int)(BOOT_IRQ+1))= (unsigned int)0xa000003C;
+initFIFO();
 lltrace(cinit_init(),CINITINIT);
 
  /* -------------------------------------------------------------------

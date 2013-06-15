@@ -70,6 +70,7 @@
  *****************************************************************************/
 
 #include "../core/mutex.h"
+#include "../core/ipc.h"
 
 #include "../headers/api_types.h"
 #include "../devices/ddf_io.h"
@@ -171,16 +172,19 @@ void switchLED(BYTE value)
 void C_EntryTask1(void)
 {
 volatile int delay;
-  if (openLED()==TRUE)
+int a=0;
+  if (openLED()==TRUE && createFIFO(1) != -1)
   {
     while (1) 
     {
-	bWAIT;
-    	for (delay=0; delay<0x0Affff; delay++) {}
-		if(ledValue>=255)
-			ledValue=0;
-		else ledValue++;
-		switchLED((BYTE)ledValue);
+//	bWAIT;
+   	for (delay=0; delay<0x05ffff; delay++) {}
+		if(a>=255)
+			a=0;
+		else a++;
+		writeFIFO(1, a);
+		
+		switchLED((BYTE)a);
     }
   }
 

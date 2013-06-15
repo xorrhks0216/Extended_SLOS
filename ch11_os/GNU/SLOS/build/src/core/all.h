@@ -76,6 +76,7 @@
 #include "../headers/api_types.h"
 #include "cli_com.h"
 #include "cli_readline.h"
+#include "ipc.h"
 #include "../devices/ddf_io.h"
 #include <assert.h>
 #include <time.h>

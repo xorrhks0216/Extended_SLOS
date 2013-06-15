@@ -25,7 +25,6 @@ INPUT( start.o
        led_driver.o
        serial_driver.o
        segment_driver.o
-		 keypad_driver.o
        mutex.o
        cinit.o
        cli_com.o
@@ -36,7 +35,7 @@ INPUT( start.o
        task1_start.o 
        task2_start.o 
        task3_start.o
-		 task4_start.o)
+		ipc.o)
 
 OUTPUT("slos.elf")
 
